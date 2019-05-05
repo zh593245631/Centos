@@ -14,6 +14,8 @@ int main()
   for(; i<=100; i++)
   {
     buf[i] = '#';
+    if(i<100)
+    buf[i+1] = '>';
     printf(" \e[0;31m[%d%%]\e[1;33m[%c]\e[1;32m[%s\r",i,a[i%3],buf);
     fflush(stdout);
     usleep(500*1000);
