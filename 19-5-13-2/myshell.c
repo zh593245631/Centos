@@ -40,6 +40,7 @@ void _create(char* argv[])
     perror("error");
   }
 }
+//当前目录文件
 char* Pwd()
 {
   //char* pwd;
@@ -77,6 +78,11 @@ int main()
     char* argv[1024] = {0};
     Split(command,argv);
     //4.创建子进程去执行替换程序
+    //cd命令特殊处理
+    if(strcmp(argv[0], "cd")== 0){
+      chdir(argv[1]);
+    }
+    else
     _create(argv);
   }    
   return 0;
