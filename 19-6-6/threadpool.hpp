@@ -7,7 +7,7 @@ class Task{
 public:
     virtual void Run()
     {
-      printf("hehe\n");
+      cout<<"hehe"<<endl;
     }
 };
 //线程池对象启动时会创建一组线程
@@ -18,14 +18,16 @@ class ThreadPool:public Task
  public:
   //n 表示创建线程的数量 
   ThreadPool(int n)
+    :_queue(n)
   {}
   //使用线程池的时候，就需要由调用者加入一些任务
   //让线程池去执行
   void AddTask(Task* task)
   {
-    
+    _queue.Push(task);    
+    //task->Run();
+    //_queue.Pop(task);
   }
  private:
   BlockingQueue<Task*> _queue;
-  
 };
