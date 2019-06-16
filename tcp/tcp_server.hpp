@@ -21,7 +21,7 @@ class TcpServer
           //5.进行accept
           TcpSocket new_sock;
           string peer_addr;
-          uint16_t peer_port = 0;
+          uint16_t peer_port;
           if(!_listen_sock.Accept(&new_sock,&peer_addr,&peer_port)){
             continue;
           }

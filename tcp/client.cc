@@ -4,7 +4,7 @@ using namespace std;
 
 int main()
 {
-  TcpClient c("127.0.0.1",9090);
+  TcpClient c("192.168.199.129",9090);
   c.Connect();
   while(1)
   {
@@ -12,8 +12,9 @@ int main()
     cout<<"请输入查询单词:"<<flush;
     cin>>msg;
     c.Send(msg);
-    c.Recv(&msg);
-    cout<<"server: "<<msg<<endl;
+    string mmm;
+    c.Recv(&mmm);
+    cout<<"server: "<<mmm<<endl;
   }
   return 0;
 }

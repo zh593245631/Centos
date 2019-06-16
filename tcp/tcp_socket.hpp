@@ -104,14 +104,14 @@ class TcpSocket{
         return true;
     }
 
-    bool Connect(string& ip, uint16_t port)const
+    bool Connect(string& ip, uint16_t port)
     {
         sockaddr_in addr;
         addr.sin_family = AF_INET;
         addr.sin_addr.s_addr = inet_addr(ip.c_str());
         addr.sin_port = htons(port);
         int ret = connect(_fd,(sockaddr*)&addr, sizeof(addr));
-
+         
         if(ret < 0){
             cerr<<"connect false";
             return false;

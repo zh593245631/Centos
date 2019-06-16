@@ -22,7 +22,7 @@ int main()
   dict.insert(make_pair("hehe","呵呵"));
   dict.insert(make_pair("hi","嗨"));
   dict.insert(make_pair("hello","你好"));
-  TcpServer s("0,0,0,0",9090);
+  TcpServer s("192.168.199.129",9090);
   s.Start(handler);
   return 0;
 }
