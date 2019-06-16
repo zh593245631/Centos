@@ -25,7 +25,7 @@ class TcpServer
           if(!_listen_sock.Accept(&new_sock,&peer_addr,&peer_port)){
             continue;
           }
-          clog<<"[client "<<peer_addr<<": "<<peer_port;
+          clog<<"[client "<<peer_addr<<": "<<peer_port<<"]";
           clog<<"客户端已连接"<<endl;
           //6.进行循环读写
           while(1)
@@ -34,7 +34,7 @@ class TcpServer
             //7. 读取请求，读取失败则结束循环
             bool ret = new_sock.Recv(&req);
             if(!ret){
-              clog<<"[client "<<peer_addr<<": "<<peer_port;
+              clog<<"[client "<<peer_addr<<": "<<peer_port<<"]";
               clog<<"客户端关闭"<<endl;
               new_sock.Close();
               break;
@@ -44,7 +44,7 @@ class TcpServer
             handler(req,&resp);
             //9.写回响应
             new_sock.Send(resp);
-            clog<<"[client "<<peer_addr<<": "<<peer_port;
+            clog<<"[client "<<peer_addr<<": "<<peer_port<<"]";
             clog<<"req "<<req<<endl;
             clog<<"resp "<<resp<<endl;
           }
