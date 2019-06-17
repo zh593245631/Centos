@@ -1,7 +1,7 @@
 #include<iostream>
 //#include"tcp_server.hpp"
-#include"tcp_process_server.hpp"
-
+//#include"tcp_process_server.hpp"
+#include"tcp_pthread_server.hpp"
 #include<unordered_map>
 
 using namespace std;
@@ -28,7 +28,8 @@ int main(int argc, char* argv[])
   dict.insert(make_pair("hi","嗨"));
   dict.insert(make_pair("hello","你好"));
   //TcpServer s(argv[1],atoi(argv[2]));
-  TcpProcessServer s(argv[1],atoi(argv[2]));
+  //TcpProcessServer s(argv[1],atoi(argv[2]));
+  TcpPthreadServer s(argv[1],atoi(argv[2]));
   s.Start(handler);
   return 0;
 }
