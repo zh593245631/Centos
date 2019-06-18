@@ -2,9 +2,13 @@
 #include"tcp_client.hpp"
 using namespace std;
 
-int main()
+int main(int argc, char* argv[])
 {
-  TcpClient c("192.168.199.129",9090);
+  if(argc != 3){
+    printf("请输入[ip] [port]\n");
+    return 0;
+  }
+  TcpClient c(argv[1],atoi(argv[2]));
   c.Connect();
   while(1)
   {

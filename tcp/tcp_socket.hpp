@@ -64,7 +64,7 @@ class TcpSocket{
             cerr<<"accept false";
             return false;
         }
-        clog<<"accept fd = %d"<<_fd<<endl;
+        clog<<"accept fd= "<<new_sock<<endl;
         peer->_fd = new_sock;
         if(ip!=NULL)
         {
