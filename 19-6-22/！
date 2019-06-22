@@ -1,0 +1,20 @@
+JSON -> JavaScript -> TypeScript(MS) JS的超集
+                      Flutter(谷歌)移动端开发框架
+
+Json 是一种非常重要的序列化/反序列化的方式i
+Json 的优点：直观，方便调试
+Json 的缺点：效率低 (东西多占用带宽)
+
+google protobuf
+二进制的方式序列化
+
+Http协议
+
+fiddler 抓包工具
+
+浏览器                        服务器
+       <---->  fidler <------>
+-----         -----           -----
+
+
+
