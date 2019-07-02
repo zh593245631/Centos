@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="zh">
+<head><title> 学习交流平台 </title></head>
+<meta http-equiv="content-Type" content="text/html;charset=utf-8">
+<body   background="index.png"
+style=" background-repeat:no-repeat;
+        background-size:100% 100%;
+        background-attachment: fixed;">
+<div style="LEFT: 750px; WIDTH: 222px; POSITION: absolute; TOP: 550px; HEIGHT: 46px" cellSpacing=2 cellPadding=1 width=500 align=left border=1>
+
+<form name = "input1" action = "/cgi-bin/tourist.cgi" method = "post" id = "form1">                                         
+   <input type="text" style="display:none;" value="" name = "username">
+   <input type="text" style="display:none;" value="" name = "password">
+   <div style="padding-left:40px;">
+   <input type = "submit" value= "游客登陆">
+   </div>
+</form>
+<form name = "input2" action = "/cgi-bin/login.cgi" method = "post" id = "form2">
+  账号: <input type = "text"     name = "username"  required oninvalid="setCustomValidity('请输入账号');" oninput="setCustomValidity('');" /> <br/>
+  口令: <input type = "password" name = "password" required oninvalid="setCustomValidity('请输入密码');" oninput="setCustomValidity('');" /> <br/>
+<br/>
+<div style="padding-left:93px;">
+<input  type = "submit" value = "登陆"/>
+<a  href="/reg.html">注册账号</a><br/>
+</div>
+</form>
+</div>
+</body>
+</html>

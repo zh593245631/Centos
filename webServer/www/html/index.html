@@ -1,0 +1,45 @@
+<html dir="ltr" lang="en-US"><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>login</title>
+          <!--- CSS --->
+            <link rel="stylesheet" href="style.css" type="text/css">
+              <!--- Javascript libraries (jQuery and Selectivizr) used for the custom checkbox --->
+
+                <!--[if (gte IE 6)&(lte IE 8)]>
+                    <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+                    <script type="text/javascript" src="selectivizr.js"></script>
+                    <noscript><link rel="stylesheet" href="fallback.css" /></noscript>
+                  <![endif]-->
+
+                    </head>
+                      <body>
+                        <div id="container">
+                            <form action="/cgi-bin/login.cgi" method="post" >
+                              <div style = "padding-top: 18;
+                                       position: fixed;
+                                           padding-left: 200;">
+                              <select name="Who">
+                                <option value="Common">Common</option>
+                                <option value="Admin">Admin</option>
+                              </select>
+                              </div>
+                                 <div class="login">LOGIN</div>
+                                      <div class="username-text">Username:</div>
+                                          <div class="password-text">Password:</div>
+                                             <div class="username-field">
+                                                    <input type="text" name="username"
+               required="" oninvalid="setCustomValidity('请输入账号');" oninput="setCustomValidity('');">
+                                              </div>
+                                        <div class="password-field">
+                                    <input type="password" name="password"
+               required="" oninvalid="setCustomValidity('请输入密码');" oninput="setCustomValidity('');">
+                          </div>
+<input type="checkbox" name="remember-me" id="remember-me"><label for="remember-me">Remember me</label>
+<div class="forgot-usr-pwd"> <a href="/cgi-bin/tourist.cgi">tourist</a> or <a href="http://212.129.243.64/reg.html">register</a>?</div>
+                     <input type="submit" name="submit" value="GO">
+                             </form>
+                        </div>
+                     <div id="footer">
+                      Web 1.0 Login 在线学习平台 
+                      </div>
+   </body></html>

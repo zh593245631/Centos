@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="zh">
+<head><title> 学习交流平台 </title></head>
+<meta http-equiv="content-Type" content="text/html;charset=utf-8">
+<body background="index.png"
+style=" background-repeat:no-repeat;
+        background-size:100% 100%;
+        background-attachment: fixed;">
+<br/>
+<iframe src="a.txt" name=iframe1></iframe>
+<div id=div1></div>
+  <script>
+    //在iframe1中已经显示有TXT文本的内容，下面代码是把TXT中的内容中的HTML标记取消，只取得文本
+    var txtval=ifram1.body.innerText;
+//把文本显示在div1中
+div1.innerHTML=txtval;
+  </script>
+
+
+  <select>
+      <option value ="volvo">Volvo</option>
+        <option value ="saab">Saab</option>
+          <option value="opel">Opel</option>
+            <option value="audi">Audi</option>
+  </select>
+
+<form name = "input2" action = "/cgi-bin/login.cgi" method = "get" id = "form2">
+  账号: <input type = "text"     name = "username"  required oninvalid="setCustomValidity('请输入账号');" oninput="setCustomValidity('');" /> <br/>
+  口令: <input type = "password" name = "password" required oninvalid="setCustomValidity('请输入密码');" oninput="setCustomValidity('');" /> <br/>
+<br/>
+<div style="padding-left:93px;">
+<input  type = "submit" value = "登陆"/>
+<a  href="/reg.html">注册账号</a><br/>
+</div>
+<select>
+      <option value ="volvo">Volvo</option>
+        <option value ="saab">Saab</option>
+          <option value="opel">Opel</option>
+            <option value="audi">Audi</option>
+  </select>
+
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+</body>
+</html>

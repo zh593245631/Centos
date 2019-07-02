@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="zh">
+<head><title> 注册页面 </title></head>
+<meta http-equiv="content-Type" content="text/html;charset=utf-8">
+<body background="reg.jpg"
+style=" background-repeat:no-repeat;
+        background-size:100% 100%;
+        background-attachment: fixed;">
+<div style="LEFT: 550px; WIDTH: 222px; POSITION: absolute; TOP: 550px; HEIGHT: 46px" cellSpacing=2 cellPadding=1 w    idth=500 align=left border=1>
+<form name = "input1" action = "/cgi-bin/reg.cgi" method = "post" id = "form1">
+  <div style = "padding-left:60px;">
+  <h2>注册账号</h2>
+  </div>
+  账号: <input type = "text" name = "username" required oninvalid="setCustomValidity('账号不能为空');" oninput="setCustomValidity('');" /> <br/>
+  口令: <input type = "password" name = "password" required oninvalid="setCustomValidity('密码不能为空');" oninput="setCustomValidity('');" /> <br/>
+<br/>
+<div style = "padding-left:93px;">
+<input type = "submit" value = "注册"/>
+</div>
+</form>
+</div>
+
+<div style="LEFT: 850px; WIDTH: 222px; POSITION: absolute; TOP: 550px; HEIGHT: 46px" cellSpacing=2 cellPadding=1 w    idth=500 align=left border=1>
+<form name = "input2" action = "/cgi-bin/greg.cgi" method = "post" id = "form2">
+  <div style = "padding-left:40px;">
+  <h2>注册管理员账号</h2>
+  </div>
+  账号: <input type = "text" name = "username" required oninvalid="setCustomValidity('账号不能为空');" oninput="setCustomValidity('');" /> <br/>
+  口令: <input type = "password" name = "password" required oninvalid="setCustomValidity('密码不能为空');" oninput="setCustomValidity('');" /> <br/>
+  认证: <input type = "password" name = "sd" required oninvalid="setCustomValidity('请输入有效信息');" oninput="setCustomValidity('');" /> <br/>
+<br/>
+<div style = "padding-left:93px;">
+<input type = "submit" value = "注册"/>
+</div>
+</form>
+</div>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
